@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Name=Wei Core
+Comment=Wei P2P Cryptocurrency
+Comment[de]=Verbinde mit dem Wei peer-to-peer Netzwerk
+Comment[fr]=Wei, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Wei, eşten eşe kriptografik sanal para birimi
+Exec=wei-qt %u
+Terminal=false
+Type=Application
+Icon=wei128
+MimeType=x-scheme-handler/wei;
+Categories=Office;Finance;
+StartupWMClass=Wei-qt

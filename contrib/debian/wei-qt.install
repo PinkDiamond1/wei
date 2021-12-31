@@ -1,0 +1,6 @@
+usr/local/bin/wei-qt usr/bin
+share/pixmaps/wei32.xpm usr/share/pixmaps
+share/pixmaps/wei16.xpm usr/share/pixmaps
+share/pixmaps/wei128.png usr/share/pixmaps
+debian/wei-qt.desktop usr/share/applications
+debian/wei-qt.protocol usr/share/kde4/services/

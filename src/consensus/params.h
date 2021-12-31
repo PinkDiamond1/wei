@@ -65,8 +65,6 @@ enum LLMQType : uint8_t
     LLMQ_TEST_V17 = 102, // 3 members, 2 (66%) threshold, one per hour. Params might differ when -llmqtestparams is used
 };
 
-// Configures a LLMQ and its DKG
-// See https://github.com/dashpay/dips/blob/master/dip-0006.md for more details
 struct LLMQParams {
     LLMQType type;
 

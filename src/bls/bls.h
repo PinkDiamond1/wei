@@ -1,16 +1,17 @@
 // Copyright (c) 2018-2021 The Dash Core developers
+// Copyright (c) 2021 The Wei Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef DASH_CRYPTO_BLS_H
-#define DASH_CRYPTO_BLS_H
+#ifndef WEI_CRYPTO_BLS_H
+#define WEI_CRYPTO_BLS_H
 
 #include <hash.h>
 #include <serialize.h>
 #include <uint256.h>
 #include <utilstrencodings.h>
 
-// bls-dash uses relic, which may define DEBUG and ERROR, which leads to many warnings in some build setups
+// bls-wei uses relic, which may define DEBUG and ERROR, which leads to many warnings in some build setups
 #undef ERROR
 #undef DEBUG
 #include <bls-dash/bls.hpp>
@@ -448,4 +449,4 @@ typedef std::shared_ptr<BLSSignatureVector> BLSSignatureVectorPtr;
 
 bool BLSInit();
 
-#endif // DASH_CRYPTO_BLS_H
+#endif // WEI_CRYPTO_BLS_H

@@ -1,0 +1,25 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="ar">locale/wei_ar.qm</file>
+        <file alias="bg">locale/wei_bg.qm</file>
+        <file alias="de">locale/wei_de.qm</file>
+        <file alias="en">locale/wei_en.qm</file>
+        <file alias="es">locale/wei_es.qm</file>
+        <file alias="fi">locale/wei_fi.qm</file>
+        <file alias="fr">locale/wei_fr.qm</file>
+        <file alias="it">locale/wei_it.qm</file>
+        <file alias="ja">locale/wei_ja.qm</file>
+        <file alias="ko">locale/wei_ko.qm</file>
+        <file alias="nl">locale/wei_nl.qm</file>
+        <file alias="pl">locale/wei_pl.qm</file>
+        <file alias="pt">locale/wei_pt.qm</file>
+        <file alias="ro">locale/wei_ro.qm</file>
+        <file alias="ru">locale/wei_ru.qm</file>
+        <file alias="sk">locale/wei_sk.qm</file>
+        <file alias="th">locale/wei_th.qm</file>
+        <file alias="tr">locale/wei_tr.qm</file>
+        <file alias="vi">locale/wei_vi.qm</file>
+        <file alias="zh_CN">locale/wei_zh_CN.qm</file>
+        <file alias="zh_TW">locale/wei_zh_TW.qm</file>
+    </qresource>
+</RCC>

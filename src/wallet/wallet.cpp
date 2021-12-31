@@ -1,6 +1,7 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2021 The Wei Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -2960,7 +2961,7 @@ void CWallet::AvailableCoins(std::vector<COutput> &vCoins, bool fOnlySafe, const
                 if (CCoinJoin::IsCollateralAmount(pcoin->tx->vout[i].nValue)) continue; // do not use collateral amounts
                 found = !CCoinJoin::IsDenominatedAmount(pcoin->tx->vout[i].nValue);
             } else if(nCoinType == CoinType::ONLY_MASTERNODE_COLLATERAL) {
-                found = pcoin->tx->vout[i].nValue == 1000*COIN;
+                found = pcoin->tx->vout[i].nValue == 35000*COIN;
             } else if(nCoinType == CoinType::ONLY_COINJOIN_COLLATERAL) {
                 found = CCoinJoin::IsCollateralAmount(pcoin->tx->vout[i].nValue);
             } else {

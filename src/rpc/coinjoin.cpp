@@ -1,4 +1,5 @@
 // Copyright (c) 2019-2021 The Dash Core developers
+// Copyright (c) 2021 The Wei Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -164,10 +165,10 @@ UniValue getcoinjoininfo(const JSONRPCRequest& request)
 static const CRPCCommand commands[] =
     { //  category              name                      actor (function)         argNames
         //  --------------------- ------------------------  ---------------------------------
-        { "dash",               "getpoolinfo",            &getpoolinfo,            {} },
-        { "dash",               "getcoinjoininfo",        &getcoinjoininfo,        {} },
+        { "wei",               "getpoolinfo",            &getpoolinfo,            {} },
+        { "wei",               "getcoinjoininfo",        &getcoinjoininfo,        {} },
 #ifdef ENABLE_WALLET
-        { "dash",               "coinjoin",               &coinjoin,               {} },
+        { "wei",               "coinjoin",               &coinjoin,               {} },
 #endif // ENABLE_WALLET
 };
 

@@ -1,4 +1,5 @@
 // Copyright (c) 2014-2021 The Dash Core developers
+// Copyright (c) 2021 The Wei Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -62,7 +63,7 @@ bool IsOldBudgetBlockValueValid(const CBlock& block, int nBlockHeight, CAmount b
 *   Determine if coinbase outgoing created money is the correct value
 *
 *   Why is this needed?
-*   - In Dash some blocks are superblocks, which output much higher amounts of coins
+*   - In Wei some blocks are superblocks, which output much higher amounts of coins
 *   - Other blocks are 10% lower in outgoing value, so in total, no extra coins are created
 *   - When non-superblocks are detected, the normal schedule should be maintained
 */
@@ -219,6 +220,12 @@ void FillBlockPayments(CMutableTransaction& txNew, int nBlockHeight, CAmount blo
 
     txNew.vout.insert(txNew.vout.end(), voutMasternodePaymentsRet.begin(), voutMasternodePaymentsRet.end());
     txNew.vout.insert(txNew.vout.end(), voutSuperblockPaymentsRet.begin(), voutSuperblockPaymentsRet.end());
+
+	CScript treasuryRewardscriptPubKey = Params().GetScriptForTreasuryFeeDestination();
+	unsigned int i = txNew.vout.size();
+	txNew.vout.resize(i + 1);
+	txNew.vout[i].scriptPubKey = treasuryRewardscriptPubKey;
+	txNew.vout[i].nValue = blockReward*0.5;
 
     std::string voutMasternodeStr;
     for (const auto& txout : voutMasternodePaymentsRet) {
