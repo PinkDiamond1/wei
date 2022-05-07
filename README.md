@@ -1,9 +1,7 @@
 Wei Core staging tree
 ===========================
 
-|CI|master|develop|
-|-|-|-|
-|Gitlab|[![Build Status](https://gitlab.com/weicrypto/wei/badges/master/pipeline.svg)](https://gitlab.com/weicrypto/wei/-/tree/master)|[![Build Status](https://gitlab.com/weicrypto/wei/badges/develop/pipeline.svg)](https://gitlab.com/weicrypto/wei/-/tree/develop)|
+
 
 https://www.weicrypto.com
 
@@ -16,8 +14,7 @@ payments to anyone, anywhere in the world. Wei uses peer-to-peer technology
 to operate with no central authority: managing transactions and issuing money
 are carried out collectively by the network. Wei Core is the name of the open
 source software which enables the use of this currency.
-For more information, as well as an immediately useable, binary version of
-the Wei Core software, see https://www.weicrypto.com/get-wei/.
+
 
 
 License
