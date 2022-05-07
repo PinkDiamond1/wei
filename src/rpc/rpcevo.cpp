@@ -1,5 +1,4 @@
-// Copyright (c) 2018-2021 The Dash Core developers
-// Copyright (c) 2021 The Wei Core developers
+// Copyright (c) 2018-2021 The Wei Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -427,7 +426,7 @@ UniValue protx_register(const JSONRPCRequest& request)
 
     size_t paramIdx = 1;
 
-    CAmount collateralAmount = 35000 * COIN;
+    CAmount collateralAmount = 40000 * COIN;
 
     CMutableTransaction tx;
     tx.nVersion = 3;
