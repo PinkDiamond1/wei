@@ -1,9 +1,9 @@
 // Copyright (c) 2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin Core developers
-// Copyright (c) 2014-2021 The Dash Core developers
-// Copyright (c) 2021 The Wei Core developers
+// Copyright (c) 2014-2021 The Wei Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
 #include <chainparams.h>
 #include <consensus/merkle.h>
 #include <key_io.h>
@@ -347,8 +347,8 @@ public:
         consensus.nMasternodeMinimumConfirmations = 15;
         consensus.BIP34Height = 151;
         consensus.BIP34Hash = uint256S("0x");
-        consensus.BIP65Height = 182;
-        consensus.BIP66Height = 189;
+        consensus.BIP65Height = 182; 
+        consensus.BIP66Height = 189; 
         consensus.DIP0001Height = 200;
         consensus.DIP0003Height = 220;
         consensus.DIP0003EnforcementHeight = 250;
@@ -429,8 +429,8 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xc9;
-        pchMessageStart[1] = 0xd1;
+        pchMessageStart[0] = 0xa7;
+        pchMessageStart[1] = 0x61;
         pchMessageStart[2] = 0xa5;
         pchMessageStart[3] = 0xe9;
         nDefaultPort = 9999;
@@ -440,14 +440,17 @@ public:
         consensus.hashGenesisBlock = genesis.GetHash();
         assert(consensus.hashGenesisBlock == uint256S("0x0000075d9985dbd6aef92efd6f257db61cedda09be3a4029aff5ede148b05608"));
         assert(genesis.hashMerkleRoot == uint256S("0x4253f9a6e04fb054ef55725157c4cd202b1e1b80e8efe4fe80d0569a9738b7a8"));
-
+        
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
         // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
         // service bits we want, but we should get them updated to support all service bits wanted by any
         // release ASAP to avoid it where possible.
-        vSeeds.emplace_back("dnsseed.weicrypto.com");
+        vSeeds.emplace_back("dnsseed1.weicrypto.com"); //todo: append domain name
+        vSeeds.emplace_back("dnsseed2.weicrypto.com");
+        vSeeds.emplace_back("dnsseed3.weicrypto.com");
+        vSeeds.emplace_back("dnsseed4.weicrypto.com");
 
         // Wei public addresses start with 'i'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,103);
@@ -461,7 +464,7 @@ public:
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x88, 0xAD, 0xE4};
 
         // Wei BIP44 coin type is '5'
-        nExtCoinType = 5;
+        nExtCoinType = 1308;
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
 
@@ -486,29 +489,29 @@ public:
         nPoolMaxParticipants = 20;
         nFulfilledRequestExpireTime = 60*60; // fulfilled requests expire in 1 hour
 
-        vSporkAddresses = {"Xgtyuk76vhuFW2iT7UAiHgNdWXCf3J34wh"};
+        vSporkAddresses = {"iUzmLg6rwUnCj9xE2msdEY9BtcfAiaiiB9"};
         nMinSporkKeys = 1;
         fBIP9CheckMasternodesUpgraded = true;
 
         checkpointData = {
-            {//todo update
-                {0, uint256S("0x000005edc3ecfd19d926136c5c3da962d9d5ae1d379aee637d4a1d575db45dd0")},
+            {
+                {1, uint256S("0x000000665b3ea7a5e97ab7bf465b6084e9c5902f99da4880c10962fc71ea6de9")},
             }
         };
 
         chainTxData = ChainTxData{
-            1632302665, // * UNIX timestamp of last known number of transactions (Block 1450962)
-            0,   // * total number of transactions between genesis and that timestamp
+            1645600814, // * UNIX timestamp of last known number of transactions (Block 1450962)
+            2,   // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.3         // * estimated number of transactions per second after that timestamp
         };
     }
 };
 
-//todo update
+
 std::string CChainParams::GetTreasuryFeeRewardAddress()
 {
-	return "XuFRQgsu6BURHsEL8x3K6TcVpjqMLoyGXd";
+	return "iUtUTiKeJs9A3rZam6J4fhpeztq3LBKyhZ";
 }
 
 CScript CChainParams::GetScriptForTreasuryFeeDestination() {
