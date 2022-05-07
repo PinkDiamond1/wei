@@ -1,4 +1,4 @@
-Wei Core staging tree 0.17
+Wei Core staging tree
 ===========================
 
 |CI|master|develop|
