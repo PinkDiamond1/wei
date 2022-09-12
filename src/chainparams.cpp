@@ -628,17 +628,17 @@ public:
         nDefaultPort = 19999;
         nPruneAfterHeight = 1000;
 
-        genesis = CreateGenesisBlock(1390666206UL, 3861367235UL, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1662832541, 4002631, 0x1e0ffff0, 1, 0 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        //assert(consensus.hashGenesisBlock == uint256S("0x00000bafbc94add76cb75e2ec92894837288a481e5c005f6563d91623bf8bc2c"));
-        //assert(genesis.hashMerkleRoot == uint256S("0xe0028eb9648db56b1ac77cf090b99048a8007e2bb64b68f092c03c7f56a662c7"));
+        assert(consensus.hashGenesisBlock == uint256S("000004cb6b3cfd877112911eb530b5d7cb47358b0fa39ce91698b6484238647d"));
+        assert(genesis.hashMerkleRoot == uint256S("0x4253f9a6e04fb054ef55725157c4cd202b1e1b80e8efe4fe80d0569a9738b7a8"));
 
         vFixedSeeds.clear();
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_test, pnSeed6_test + ARRAYLEN(pnSeed6_test));
 
         vSeeds.clear();
         // nodes with support for servicebits filtering should be at the top
-        vSeeds.emplace_back("testnet-seed.weidot.io"); // Just a static list of stable node(s), only supports x9
+        vSeeds.emplace_back("161.35.95.233"); // Just a static list of stable node(s), only supports x9
 
         // Testnet Wei addresses start with 'y'
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,140);
@@ -681,13 +681,13 @@ public:
 
         checkpointData = {
             {
-                {0, uint256S("0x00000c26026d0815a7e2ce4fa270775f61403c040647ff2c3091f99e894a4618")},
+                {1, uint256S("0x000000665b3ea7a5e97ab7bf465b6084e9c5902f99da4880c10962fc71ea6de9")},
             }
         };
 
         chainTxData = ChainTxData{
-            1617874832, // * UNIX timestamp of last known number of transactions (Block 477483)
-            0,    // * total number of transactions between genesis and that timestamp
+            1645600814, // * UNIX timestamp of last known number of transactions (Block 477483)
+            2,    // * total number of transactions between genesis and that timestamp
                         //   (the tx=... number in the SetBestChain debug.log lines)
             0.01        // * estimated number of transactions per second after that timestamp
         };
